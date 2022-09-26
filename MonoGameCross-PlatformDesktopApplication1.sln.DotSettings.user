@@ -1,0 +1,26 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
+  &lt;Assembly Path="/home/whomagoo/.nuget/packages/svg/3.3.0/lib/netcoreapp3.1/Svg.dll" /&gt;
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a1d70668_002D215e_002D4369_002Db734_002Db1a849a6269b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;And&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;NUnit3x::8FCE30AE-78A6-4335-A70D-332CE015D3CE::net6.0::DiplomacyGameTests.Tests.Test1&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::DF61C7F2-4905-4C62-9890-A13E84267252::.NETCoreApp,Version=v3.1::DiplomacyGameTests.Tests.Test1&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+    &lt;Not&gt;
+      &lt;Project Location="/home/whomagoo/RiderProjects/MonoGameCross-PlatformDesktopApplication1/DiplomacyGameTests" Presentation="&amp;lt;DiplomacyGameTests&amp;gt;" /&gt;
+    &lt;/Not&gt;
+  &lt;/And&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d0145759_002Dbc87_002D425c_002Da505_002Dac4d50619e41/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;And&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;NUnit3x::8FCE30AE-78A6-4335-A70D-332CE015D3CE::net6.0::DiplomacyGameTests.Tests.Test1&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::DF61C7F2-4905-4C62-9890-A13E84267252::.NETCoreApp,Version=v3.1::DiplomacyGameTests.Tests.Test1&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+    &lt;Not&gt;
+      &lt;Project Location="/home/whomagoo/RiderProjects/MonoGameCross-PlatformDesktopApplication1/DiplomacyGameTests" Presentation="&amp;lt;DiplomacyGameTests&amp;gt;" /&gt;
+    &lt;/Not&gt;
+  &lt;/And&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

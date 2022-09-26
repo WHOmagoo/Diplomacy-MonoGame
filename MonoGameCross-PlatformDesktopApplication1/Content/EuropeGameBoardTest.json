@@ -1,0 +1,112 @@
+{
+  "LocationTypes": [
+    {
+      "Name":  "Land",
+      "Capacity": 1
+    },
+    {
+      "Name": "Offshore",
+      "Capacity": 1
+    },
+    {
+      "Name": "Coastal",
+      "InheritedFrom": [
+        "Land",
+        "Offshore"
+      ],
+      "Capacity": 1
+    },
+    {
+      "Name": "OffMap",
+      "InheritedFrom": [
+        "Coastal",
+        "Land",
+        "Offshore"
+      ],
+      "Capacity": -1
+    }
+  ],
+  "UnitTypes": [
+    {
+      "Name": "Army",
+      "Value": 1,
+      "Visits": ["Land"]
+    },
+    {
+      "Name": "Navy",
+      "Value": 1,
+      "Visits": ["Coastal", "OffMap"]
+    }
+  ],
+  "Locations": [
+    {
+      "Name": "London",
+      "Type": "Coastal",
+      "Value": 1
+    },
+    {
+      "Name": "Wales",
+      "Type": "Coastal",
+      "Value": 1
+    },
+    {
+      "Name": "Liverpool",
+      "Type": "Coastal",
+      "Value": 1
+    },
+    {
+      "Name":  "Edinburgh",
+      "Type": "Coastal",
+      "Value": 1
+    }
+  ],
+  "Neighbors": [
+    {
+      "CurLocation": "London",
+      "Neighbors": [
+        "Wales",
+        "Edinburgh"
+      ]
+    },
+    {
+      "CurLocation": "Wales",
+      "Neighbors": [
+          "Liverpool",
+          "Edinburgh",
+          "London"
+        ]
+    },
+    {
+      "CurLocation": "Liverpool",
+      "Neighbors": [
+        "Edinburgh",
+        "Wales"
+      ]
+    },
+    {
+      "CurLocation":  "Edinburgh",
+      "Neighbors": [
+        "London",
+        "Wales",
+        "Liverpool"
+      ]
+    }
+  ],
+  "Teams": [
+    {
+      "Name": "England",
+      "ControlledLocations": [
+        "London"
+      ],
+      "Score": 1,
+      "Units": [
+        {
+          "Location": "London",
+          "Type": "Navy",
+          "Team": "England",
+          "Id": "England1"
+        }
+      ]
+    }
+  ]
+}

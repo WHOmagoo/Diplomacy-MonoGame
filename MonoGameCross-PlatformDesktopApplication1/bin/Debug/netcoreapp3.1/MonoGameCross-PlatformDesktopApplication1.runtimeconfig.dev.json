@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/whomagoo/.dotnet/store/|arch|/|tfm|",
+      "/home/whomagoo/.nuget/packages"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>/home/whomagoo/RiderProjects/MonoGameCross-PlatformDesktopApplication1/MonoGameCross-PlatformDesktopApplication1/Content/Fonts/sf.spritefont</SourceFile>
+  <SourceTime>2021-12-26T21:56:05.2588615-08:00</SourceTime>
+  <DestFile>/home/whomagoo/RiderProjects/MonoGameCross-PlatformDesktopApplication1/MonoGameCross-PlatformDesktopApplication1/Content/bin/DesktopGL/Content/Fonts/sf.xnb</DestFile>
+  <DestTime>2021-12-26T21:57:26.0036911-08:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2020-08-10T09:17:54-07:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2020-08-10T09:17:54-07:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

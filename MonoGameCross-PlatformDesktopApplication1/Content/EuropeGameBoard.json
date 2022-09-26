@@ -1,0 +1,688 @@
+{
+  "LocationTypes": [
+    {
+      "Name": "Land",
+      "Capacity": 1
+    },
+    {
+      "Name": "Offshore",
+      "Capacity": 1
+    },
+    {
+      "Name": "Coastal",
+      "InheritedFrom": [
+        "Land",
+        "Offshore"
+      ],
+      "Capacity": 1
+    },
+    {
+      "Name": "Off Map",
+      "InheritedFrom": [
+        "Coastal",
+        "Land",
+        "Offshore"
+      ],
+      "Capacity": -1
+    }
+  ],
+  "UnitTypes": [
+    {
+      "Name": "Army",
+      "Value": 1,
+      "Visits": [
+        "Land"
+      ]
+    },
+    {
+      "Name": "Navy",
+      "Value": 1,
+      "Visits": [
+        "Coastal",
+        "OffMap"
+      ]
+    }
+  ],
+  "MoveTypes": {
+    "Move": {
+      "Targets": [
+        {"Condition": "Any"},
+        {"Condition": "Visitable,Neighbor"}
+      ]
+    },
+    "Attack": {
+      "Targets": [
+        {"Condition": "Any"},
+        {"Condition": "Visitable,Neighbor"}
+      ]
+    },
+    "Support":
+    {
+      "Targets": [
+        {"Condition": "Any"},
+        {"Condition": "Neighbor.Neighbor"},
+        {"Conditions": [
+          "Neighbor.Neighbor.Attack",
+          "Attack"
+        ]}
+      ]
+    },
+    "Defend": {
+      "Tragets": [
+        "Move.Occupied"
+      ]
+    },
+    "Convoy": {
+
+    }
+  },
+  "Locations": [
+    {
+      "Name": "Off Map",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Liverpool",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Ireland",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Wales",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Edinburgh",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "London",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Norway",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Sweden",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Finland",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Vologda",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Leningrad",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Smolensk",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Moscow",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Bellorussia",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Presov",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Kiev",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Holland",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Kiel",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Berlin",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Siliesia",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Ruhr",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Munich",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Belgium",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Picardy",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Brest",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Paris",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Marseille",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Gacony",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Bilboa",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Lugo",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Portugal",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Seville",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Valancia",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Barcelona",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Ust",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Pechora",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Komi",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Gorki",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Crimea",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Rostov",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Czechoslovakia",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Austria",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Hungary",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Bosnia",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Albania",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Serbia",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Banat",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Romania",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Bulgaria",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Macedonia",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Greece",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Istanbul",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Samsun",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Kras",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Izmir",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Lebanon",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Israel",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Jordan",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Piedmont",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Venice",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Tuscany",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Rome",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Apulia",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Naples",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Sicily",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Sardinia",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Casablanca",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Algiers",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Setif",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Aflou",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Sahara",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Fazzar",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Murzq",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Bengasi",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Sallum",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Tobruk",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Cairo",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Nile",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Sawhaj",
+      "Type": "Land",
+      "Value": 0
+    },
+    {
+      "Name": "Crete",
+      "Type": "Land",
+      "Value": 1
+    },
+    {
+      "Name": "Irish Sea",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "North Sea",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "Baltic Sea",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "English Channel",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "Atlantic Ocean",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "Bay of Biscay",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "Gibraltar",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "Western Mediterranean",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "Gulf of Lyons",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "Tyrrhenian Sea",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "Ionian Sea",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "Adriatic Sea",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "Agean Sea",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "Eastern Mediterranean",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "Red Sea",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "Lake Cherkassy",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "West Black Sea",
+      "Type": "Offshore",
+      "Value": 0
+    },
+    {
+      "Name": "East Black Sea",
+      "Type": "Offshore",
+      "Value": 0
+    }
+  ],
+  "Neighbors": [
+    {"CurLocation": "Off Map", "Neighbors": ["Norway", "Sweden", "Pechora", "Kras", "Jordan", "Sawhaj", "Murzq", "Fazzar", "Sahara", "Portugal", "Ireland", "Irish Sea", "East Black Sea", "Red Sea", "Gibraltar", "Atlantic Ocean"]},
+    {"CurLocation": "Liverpool", "Neighbors": ["Edinburgh", "Wales", "Irish Sea"]},
+    {"CurLocation": "Ireland", "Neighbors": ["Off Map", "Wales", "Irish Sea", "English Channel", "Atlantic Ocean"]},
+    {"CurLocation": "Wales", "Neighbors": ["Liverpool", "Edinburgh", "London", "Ireland", "Irish Sea", "English Channel"]},
+    {"CurLocation": "Edinburgh", "Neighbors": ["Liverpool", "Wales", "London", "Norway", "North Sea", "Irish Sea"]},
+    {"CurLocation": "London", "Neighbors": ["Wales", "Edinburgh", "Belgium", "North Sea", "English Channel"]},
+    {"CurLocation": "Norway", "Neighbors": ["Edinburgh", "Off Map", "Sweden", "Irish Sea", "North Sea"]},
+    {"CurLocation": "Sweden", "Neighbors": ["Norway", "Finland", "Off Map", "Vologda", "Ust", "Pechora", "North Sea", "Baltic Sea"]},
+    {"CurLocation": "Finland", "Neighbors": ["Vologda", "Leningrad", "Baltic Sea", "Sweden"]},
+    {"CurLocation": "Vologda", "Neighbors": ["Sweden", "Sweden", "Ust", "Moscow", "Smolensk", "Finland", "Komi", "Leningrad"]},
+    {"CurLocation": "Leningrad", "Neighbors": ["Finland", "Berlin", "Smolensk", "Vologda", "Baltic Sea", "Bellorussia"]},
+    {"CurLocation": "Smolensk", "Neighbors": ["Leningrad", "Vologda", "Moscow", "Kiev", "Bellorussia"]},
+    {"CurLocation": "Moscow", "Neighbors": ["Vologda", "Komi", "Crimea", "Kiev", "Smolensk"]},
+    {"CurLocation": "Bellorussia", "Neighbors": ["Leningrad", "Smolensk", "Kiev", "Presov", "Siliesia", "Berlin"]},
+    {"CurLocation": "Presov", "Neighbors": ["Bellorussia", "Kiev", "Siliesia", "Czechoslovakia", "Hungary"]},
+    {"CurLocation": "Kiev", "Neighbors": ["Presov", "Bellorussia", "Smolensk", "Moscow", "Hungary", "East Black Sea", "Lake Cherkassy", "Crimea"]},
+    {"CurLocation": "Holland", "Neighbors": ["Kiel", "Ruhr", "North Sea"]},
+    {"CurLocation": "Kiel", "Neighbors": ["Holland", "North Sea", "Berlin", "Siliesia", "Ruhr", "Baltic Sea"]},
+    {"CurLocation": "Berlin", "Neighbors": ["Kiel", "Siliesia", "Leningrad", "Baltic Sea", "Bellorussia"]},
+    {"CurLocation": "Siliesia", "Neighbors": ["Kiel", "Berlin", "Ruhr", "Munich", "Czechoslovakia", "Bellorussia", "Presov"]},
+    {"CurLocation": "Ruhr", "Neighbors": ["Holland", "Kiel", "Austria", "Siliesia", "Munich"]},
+    {"CurLocation": "Munich", "Neighbors": ["Ruhr", "Siliesia", "Czechoslovakia", "Austria"]},
+    {"CurLocation": "Belgium", "Neighbors": ["London", "North Sea", "Picardy", "English Channel"]},
+    {"CurLocation": "Picardy", "Neighbors": ["Belgium", "Brest", "Paris", "Marseille", "English Channel"]},
+    {"CurLocation": "Brest", "Neighbors": ["Picardy", "Paris", "Marseille", "English Channel", "Bay of Biscay", "Gacony"]},
+    {"CurLocation": "Paris", "Neighbors": ["Picardy", "Marseille", "Brest"]},
+    {"CurLocation": "Marseille", "Neighbors": ["Paris", "Picardy", "Gacony", "Barcelona", "Brest", "Gulf of Lyons"]},
+    {"CurLocation": "Gacony", "Neighbors": ["Brest", "Marseille", "Bilboa", "Barcelona", "Bay of Biscay"]},
+    {"CurLocation": "Bilboa", "Neighbors": ["Gacony", "Barcelona", "Valancia", "Lugo", "Bay of Biscay"]},
+    {"CurLocation": "Lugo", "Neighbors": ["Bilboa", "Valancia", "Seville", "Portugal", "Atlantic Ocean", "Bay of Biscay"]},
+    {"CurLocation": "Portugal", "Neighbors": ["Lugo", "Atlantic Ocean", "Seville", "Off Map", "Gibraltar"]},
+    {"CurLocation": "Seville", "Neighbors": ["Portugal", "Valancia", "Lugo", "Casablanca", "Gibraltar", "Western Mediterranean"]},
+    {"CurLocation": "Valancia", "Neighbors": ["Seville", "Lugo", "Bilboa", "Western Mediterranean", "Barcelona", "Gulf of Lyons"]},
+    {"CurLocation": "Barcelona", "Neighbors": ["Bilboa", "Gacony", "Valancia", "Gulf of Lyons", "Marseille"]},
+    {"CurLocation": "Ust", "Neighbors": ["Pechora", "Komi", "Vologda", "Sweden"]},
+    {"CurLocation": "Pechora", "Neighbors": ["Ust", "Off Map", "Komi", "Rostov", "East Black Sea", "Sweden"]},
+    {"CurLocation": "Komi", "Neighbors": ["Ust", "Pechora", "Gorki", "Rostov", "Crimea", "Vologda", "Moscow"]},
+    {"CurLocation": "Gorki", "Neighbors": ["Komi", "Crimea", "Rostov"]},
+    {"CurLocation": "Crimea", "Neighbors": ["Rostov", "Gorki", "Komi", "Moscow", "Kiev", "East Black Sea"]},
+    {"CurLocation": "Rostov", "Neighbors": ["Pechora", "Kras", "Komi", "Gorki", "East Black Sea", "Crimea"]},
+    {"CurLocation": "Czechoslovakia", "Neighbors": ["Siliesia", "Munich", "Austria", "Hungary", "Presov"]},
+    {"CurLocation": "Austria", "Neighbors": ["Ruhr", "Munich", "Czechoslovakia", "Hungary", "Bosnia", "Albania", "Adriatic Sea"]},
+    {"CurLocation": "Hungary", "Neighbors": ["Czechoslovakia", "Presov", "Kiev", "Banat", "Serbia", "Albania", "Lake Cherkassy", "Bosnia", "Austria"]},
+    {"CurLocation": "Bosnia", "Neighbors": ["Austria", "Hungary", "Albania"]},
+    {"CurLocation": "Albania", "Neighbors": ["Hungary", "Adriatic Sea", "Austria", "Bosnia", "Serbia", "Greece"]},
+    {"CurLocation": "Serbia", "Neighbors": ["Hungary", "Albania", "Banat", "Romania", "Greece", "Albania"]},
+    {"CurLocation": "Banat", "Neighbors": ["Hungary", "Serbia", "Romania", "Lake Cherkassy"]},
+    {"CurLocation": "Romania", "Neighbors": ["Banat", "Bulgaria", "Macedonia", "Greece", "West Black Sea", "Serbia", "Lake Cherkassy"]},
+    {"CurLocation": "Bulgaria", "Neighbors": ["Romania", "Macedonia", "West Black Sea", "Agean Sea", "Greece", "Istanbul"]},
+    {"CurLocation": "Macedonia", "Neighbors": ["Bulgaria", "Romania", "Greece"]},
+    {"CurLocation": "Greece", "Neighbors": ["Macedonia", "Bulgaria", "Romania", "Adriatic Sea", "Albania", "Serbia", "Agean Sea"]},
+    {"CurLocation": "Istanbul", "Neighbors": ["Bulgaria", "Samsun", "Agean Sea", "West Black Sea", "Izmir", "East Black Sea"]},
+    {"CurLocation": "Samsun", "Neighbors": ["Istanbul", "Kras", "Izmir", "Lebanon", "East Black Sea"]},
+    {"CurLocation": "Kras", "Neighbors": ["Samsun", "Lebanon", "Jordan", "Off Map", "East Black Sea", "Rostov"]},
+    {"CurLocation": "Izmir", "Neighbors": ["Istanbul", "Eastern Mediterranean", "Agean Sea", "Samsun", "Lebanon", "Israel"]},
+    {"CurLocation": "Lebanon", "Neighbors": ["Izmir", "Israel", "Jordan", "Samsun", "Kras"]},
+    {"CurLocation": "Israel", "Neighbors": ["Izmir", "Lebanon", "Eastern Mediterranean", "Jordan", "Cairo", "Red Sea"]},
+    {"CurLocation": "Jordan", "Neighbors": ["Israel", "Lebanon", "Kras", "Off Map", "Red Sea"]},
+    {"CurLocation": "Piedmont", "Neighbors": ["Tuscany", "Venice", "Gulf of Lyons", "Tyrrhenian Sea"]},
+    {"CurLocation": "Venice", "Neighbors": ["Tuscany", "Adriatic Sea", "Piedmont", "Apulia", "Rome", "Ionian Sea"]},
+    {"CurLocation": "Tuscany", "Neighbors": ["Piedmont", "Venice", "Rome", "Tyrrhenian Sea"]},
+    {"CurLocation": "Rome", "Neighbors": ["Tuscany", "Naples", "Apulia", "Venice", "Tyrrhenian Sea"]},
+    {"CurLocation": "Apulia", "Neighbors": ["Venice", "Rome", "Naples", "Ionian Sea"]},
+    {"CurLocation": "Naples", "Neighbors": ["Apulia", "Rome", "Sicily", "Ionian Sea", "Tyrrhenian Sea"]},
+    {"CurLocation": "Sicily", "Neighbors": ["Bengasi", "Naples", "Tyrrhenian Sea", "Ionian Sea"]},
+    {"CurLocation": "Sardinia", "Neighbors": ["Algiers", "Tyrrhenian Sea", "Western Mediterranean"]},
+    {"CurLocation": "Casablanca", "Neighbors": ["Algiers", "Seville", "Aflou", "Western Mediterranean", "Gibraltar"]},
+    {"CurLocation": "Algiers", "Neighbors": ["Western Mediterranean", "Casablanca", "Setif", "Sardinia", "Aflou", "Tyrrhenian Sea"]},
+    {"CurLocation": "Setif", "Neighbors": ["Algiers", "Aflou", "Sahara", "Fazzar", "Tyrrhenian Sea", "Bengasi"]},
+    {"CurLocation": "Aflou", "Neighbors": ["Casablanca", "Algiers", "Setif", "Sahara", "Gibraltar"]},
+    {"CurLocation": "Sahara", "Neighbors": ["Aflou", "Setif", "Fazzar", "Off Map", "Gibraltar"]},
+    {"CurLocation": "Fazzar", "Neighbors": ["Off Map", "Sahara", "Murzq", "Setif", "Bengasi"]},
+    {"CurLocation": "Murzq", "Neighbors": ["Bengasi", "Fazzar", "Sawhaj", "Sallum", "Off Map"]},
+    {"CurLocation": "Bengasi", "Neighbors": ["Setif", "Tyrrhenian Sea", "Fazzar", "Murzq", "Sallum", "Sicily", "Ionian Sea"]},
+    {"CurLocation": "Sallum", "Neighbors": ["Sawhaj", "Tobruk", "Nile", "Bengasi", "Murzq", "Ionian Sea"]},
+    {"CurLocation": "Tobruk", "Neighbors": ["Sallum", "Nile", "Cairo", "Crete", "Eastern Mediterranean", "Ionian Sea"]},
+    {"CurLocation": "Cairo", "Neighbors": ["Israel", "Nile", "Tobruk", "Eastern Mediterranean", "Red Sea"]},
+    {"CurLocation": "Nile", "Neighbors": ["Cairo", "Tobruk", "Sallum", "Red Sea", "Sawhaj"]},
+    {"CurLocation": "Sawhaj", "Neighbors": ["Off Map", "Sallum", "Murzq", "Nile", "Red Sea"]},
+    {"CurLocation": "Crete", "Neighbors": ["Tobruk", "Ionian Sea", "Eastern Mediterranean"]},
+    {"CurLocation": "Irish Sea", "Neighbors": ["Edinburgh", "Ireland", "Liverpool", "Norway", "Off Map", "Wales", "North Sea", "English Channel"]},
+    {"CurLocation": "North Sea", "Neighbors": ["Belgium", "Edinburgh", "Holland", "Kiel", "London", "Norway", "English Channel", "Irish Sea", "Sweden", "Baltic Sea"]},
+    {"CurLocation": "Baltic Sea", "Neighbors": ["Berlin", "Finland", "Kiel", "Sweden", "North Sea", "Leningrad"]},
+    {"CurLocation": "English Channel", "Neighbors": ["Belgium", "Brest", "Ireland", "Irish Sea", "London", "Picardy", "Wales", "Bay of Biscay", "Atlantic Ocean", "North Sea"]},
+    {"CurLocation": "Atlantic Ocean", "Neighbors": ["Bay of Biscay", "Gibraltar", "Ireland", "Lugo", "Off Map", "Portugal", "English Channel"]},
+    {"CurLocation": "Bay of Biscay", "Neighbors": ["Bilboa", "Brest", "Gacony", "Lugo", "Atlantic Ocean", "English Channel"]},
+    {"CurLocation": "Gibraltar", "Neighbors": ["Aflou", "Casablanca", "Off Map", "Portugal", "Seville", "Western Mediterranean", "Atlantic Ocean"]},
+    {"CurLocation": "Western Mediterranean", "Neighbors": ["Algiers", "Casablanca", "Sardinia", "Gulf of Lyons", "Seville", "Valancia", "Gibraltar", "Tyrrhenian Sea"]},
+    {"CurLocation": "Gulf of Lyons", "Neighbors": ["Barcelona", "Marseille", "Piedmont", "Valancia", "Western Mediterranean", "Tyrrhenian Sea"]},
+    {"CurLocation": "Tyrrhenian Sea", "Neighbors": ["Algiers", "Bengasi", "Naples", "Piedmont", "Rome", "Sardinia", "Setif", "Sicily", "Tuscany", "Ionian Sea", "Gulf of Lyons", "Western Mediterranean"]},
+    {"CurLocation": "Ionian Sea", "Neighbors": ["Apulia", "Tyrrhenian Sea", "Adriatic Sea", "Bengasi", "Crete", "Naples", "Sallum", "Sicily", "Tobruk", "Venice", "Agean Sea", "Eastern Mediterranean"]},
+    {"CurLocation": "Adriatic Sea", "Neighbors": ["Albania", "Austria", "Greece", "Venice", "Agean Sea", "Ionian Sea"]},
+    {"CurLocation": "Agean Sea", "Neighbors": ["West Black Sea", "Adriatic Sea", "Bulgaria", "Greece", "Istanbul", "Izmir", "Eastern Mediterranean", "Ionian Sea"]},
+    {"CurLocation": "Eastern Mediterranean", "Neighbors": ["Cairo", "Ionian Sea", "Agean Sea", "Red Sea", "Crete", "Israel", "Izmir", "Tobruk"]},
+    {"CurLocation": "Red Sea", "Neighbors": ["Cairo", "Israel", "Jordan", "Nile", "Off Map", "Eastern Mediterranean", "Sawhaj"]},
+    {"CurLocation": "Lake Cherkassy", "Neighbors": ["Banat", "Hungary", "Kiev", "Romania", "West Black Sea", "East Black Sea"]},
+    {"CurLocation": "West Black Sea", "Neighbors": ["Bulgaria", "Istanbul", "Romania", "Agean Sea", "East Black Sea", "Lake Cherkassy"]},
+    {"CurLocation": "East Black Sea", "Neighbors": ["Crimea", "Kiev", "West Black Sea", "Istanbul", "Lake Cherkassy", "Kras", "Off Map", "Pechora", "Rostov", "Samsun"]}
+],
+  "Teams": [
+    {
+      "Name": "England",
+      "ControlledLocations": [
+        "London"
+      ],
+      "Score": 1,
+      "Units": [
+        {
+          "Location": "London",
+          "Type": "Navy",
+          "Team": "England",
+          "Id": "England1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "Locations": [
+    {
+      "Name": "London",
+      "Type": "Coastal",
+      "Neighbors": [
+        "Wales",
+        "Edinburgh"
+      ],
+      "Value": 1
+    },
+    {
+      "Name": "Wales",
+      "Type": "Coastal",
+      "Neighbors": {
+        "Neibhors": [
+        "Liverpool",
+        "Edinburgh",
+        "London"
+        ],
+        "CurLocation": " Tehe"
+      },
+      "Value": 1
+    },
+    {
+      "Name": "Liverpool",
+      "Type": "Coastal",
+      "Neighbors": [
+        "Edinburgh",
+        "Wales"
+      ],
+      "Value": 1
+    },
+    {
+      "Name":  "Edinburgh",
+      "Type": "Coastal",
+      "Neighbors": [
+        "London",
+        "Wales",
+        "Liverpool"
+      ],
+      "Value": 1
+    }
+  ]
+}
